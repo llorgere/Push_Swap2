@@ -32,10 +32,12 @@ struct	node
 typedef struct
 {
 	size_t		length;
+	struct	node *p_head;
 	struct	node *p_tail;
-	struct	node *p_prev;
 }		Stack;
 
+Stack	ft_stack_addtail(Stack *p_list, int data);
+Stack	ft_stack_addhead(Stack *p_list, int data);
 int		ft_stack_empty(stack stk);
 int		ft_stack_full(stack stk);
 stack	ft_stack_init(stack stk, int *tab, int size, int top);
